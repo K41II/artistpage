@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap");
+ * {
+	 padding: 0;
+	 margin: 0;
+	 box-sizing: border-box;
+}
+ body {
+	 font-family: "Kode Mono", monospace;
+}
+ .nav {
+	 position: fixed;
+	 top: 0;
+	 left: 0;
+	 width: 100%;
+	 background-color: #222;
+	 color: white;
+	 padding: 10px 0;
+	 z-index: 1000;
+}
+ .nav ul {
+	 list-style: none;
+	 padding: 0;
+	 margin: 0;
+	 display: flex;
+	 justify-content: center;
+	 padding-top: 20px;
+	 padding-bottom: 20px;
+	 border-bottom: 3px white solid;
+}
+ .nav ul li {
+	 margin: 0 20px;
+	 color: white;
+	 font-size: 20px;
+	 padding-right: 10px;
+}
+ .nav ul a {
+	 text-decoration: none;
+}
+ .nav ul a:hover {
+	 text-decoration: underline white;
+}
+ #s1 {
+	 height: 100vh;
+	 background-color: #222;
+	 color: rgba(255, 255, 255, 0.9);
+	 font-size: 4em;
+	 letter-spacing: 10px;
+	 display: flex;
+	 flex-direction: column;
+	 align-items: center;
+	 justify-content: center;
+	 padding-top: 60px;
+}
+ #s1 p {
+	 border: 5px white solid;
+	 padding: 5px;
+	 padding-left: 12px;
+}
+ #s2 {
+	 height: 100vh;
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+	 background-color: rgba(0, 0, 0, 0.8);
+	 color: rgba(255, 255, 255, 0.9);
+}
+ #s2 .abtAndImg {
+	 position: relative;
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+}
+ #s2 .abtAndImg .abt {
+	 width: 400px;
+	 position: relative;
+	 z-index: 2;
+	 background-color: rgba(255, 255, 255, 0.1);
+	 padding: 20px;
+	 color: rgba(255, 255, 255, 0.9);
+}
+ #s2 .abtAndImg #img {
+	 width: 450px;
+	 position: relative;
+	 z-index: 1;
+}
+ .light-bg {
+	 background-color: rgba(255, 255, 255, 0.8);
+	 color: rgba(0, 0, 0, 0.9);
+}
+ .light-bg .abt {
+	 color: rgba(0, 0, 0, 0.9);
+}
+ 
