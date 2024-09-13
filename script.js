@@ -1,17 +1,33 @@
 $(document).ready(function() {
-      // Track the scroll event
-      $(window).scroll(function() {
-        // Get the scroll position from the top of the page
-        var scrollPos = $(this).scrollTop();
-        
-        // Log the scroll position or do something with it
-        console.log('Scroll Position: ' + scrollPos);
-        
-        // Example: Change background color based on scroll position
-        if (scrollPos > 100) {
-          $('.nav').fadeOut("slow");
-        } else {
-          $('.nav').fadeIn("slow");
-        }
-      });
-    });
+  var lastScrollTop = 0; // Variable to store the last scroll position
+
+  $(window).scroll(function() {
+    var scrollPos = $(this).scrollTop();
+
+    // Handle navigation visibility
+    if (scrollPos > lastScrollTop) {
+      // User is scrolling down
+      if (scrollPos > 100) {
+        $('.nav').fadeOut("slow");
+      }
+    } else {
+      // User is scrolling up
+      $('.nav').fadeIn("slow");
+    }
+
+    // Handle button visibility
+    if (scrollPos > 300) {
+      $('#upArrow').fadeIn("slow");
+    } else {
+      $('#upArrow').fadeOut("slow");
+    }
+
+    // Update lastScrollTop with the current scroll position
+    lastScrollTop = scrollPos;
+  });
+
+  // Handle button click to scroll to top
+  $('#upArrow').click(function() {
+    $('html, body').animate({ scrollTop: 0 }, 'slow');
+  });
+});
