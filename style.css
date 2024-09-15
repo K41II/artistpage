@@ -107,3 +107,35 @@
 	z-index: 1001; /* Ensures it's above most content */
 
 }
+
+.music-player {
+    background: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#play-pause {
+    background-color: #ff4c4c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#seek-bar {
+    width: 100%;
+    margin: 0 10px;
+}
+
+#current-time, #total-time {
+    font-size: 0.9em;
+}
