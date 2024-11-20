@@ -73,4 +73,15 @@ $(document).ready(function() {
         if (seconds < 10) seconds = "0" + seconds;
         return minutes + ":" + seconds;
     }
+
+    // Show the alert box and disable scrolling
+    $('#alertBox').addClass('active');
+    $('body').css('overflow', 'hidden'); // Disable scrolling
+ 
+    // Close the alert box and re-enable scrolling
+    $('#closeAlert').click(function () {
+        $('#alertBox').removeClass('active');
+        $('body').css('overflow', ''); // Reset scrolling
+    });
+  
 });
